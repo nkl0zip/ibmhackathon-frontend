@@ -1,0 +1,17 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Optionally, you can use a universal selector for box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

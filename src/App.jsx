@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminLogin from "./components/AdminLogin";
+import AdminUsers from "./pages/AdminUsers";
 import Login from "./components/Login";
 import "./App.css";
 
@@ -25,6 +26,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/admin-login" element={<AdminLogin />} />
       <Route path="/dashboard" element={<AdminDashboard />} />
+      <Route path="/dashboard/users" element={<AdminUsers />} />
       <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );

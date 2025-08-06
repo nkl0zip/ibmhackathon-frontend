@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import AdminNavbar from "../components/AdminNavbar";
 
 // Admin Theme
-const Container = styled.div`
+const DashboardContainer = styled.div`
   min-height: 100vh;
-  font-family: "Inter", Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: #f6fffb;
-  font-size: 2rem;
+  font-family: "Inter", Arial, sans-serif;
+`;
+
+const Content = styled.div`
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 0 24px;
   color: #0b3c2f;
-  font-weight: 700;
 `;
 
 const LogoutButton = styled.button`
@@ -48,9 +49,13 @@ export default function AdminDashboard() {
   }
 
   return (
-    <Container>
-      Welcome to the Admin Dashboard
-      <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
-    </Container>
+    <DashboardContainer>
+      <AdminNavbar />
+      <Content>
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to the admin dashboard. Select an option from the navbar.</p>
+        {/* Render page content here based on route (dashboard, users, logs, threats) */}
+      </Content>
+    </DashboardContainer>
   );
 }
